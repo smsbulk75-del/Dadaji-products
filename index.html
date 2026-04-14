@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>DADA JI PRODUCTS | Moninder Pal Singh | Nabha, Punjab</title>
+    <!-- Google Fonts & simple reset -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fefaf5;
+            color: #2c221b;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        /* container */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* header / nav */
+        .navbar {
+            background: #fff7ef;
+            border-bottom: 1px solid #f0e2d4;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(2px);
+        }
+
+        .nav-flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            gap: 20px;
+        }
+
+        .logo h1 {
+            font-size: 1.7rem;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            color: #b45f2b;
+        }
+
+        .logo p {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #7c5e45;
+            margin-top: 4px;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.8rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #4a3524;
+            transition: 0.2s;
+            font-size: 1rem;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #c96f2c;
+            border-bottom: 2px solid #c96f2c;
+            padding-bottom: 4px;
+        }
+
+        /* sections general */
+        section {
+            padding: 70px 0 60px;
+            border-bottom: 1px solid #f3e9e0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #b45f2b;
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #e0b28a;
+            border-radius: 2px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #fff2e6 0%, #fde9dc 100%);
+            padding: 70px 0 70px;
+            border-bottom: 1px solid #eedbcb;
+        }
+
+        .hero-grid {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text .brand-tag {
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            color: #aa6f42;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .hero-text h2 {
+            font-size: 2.7rem;
+            font-weight: 800;
+            margin: 20px 0 16px;
+            color: #3e2a1c;
+        }
+
+        .hero-text .owner {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #8b5a36;
+            margin-bottom: 20px;
+        }
+
+        .address-block {
+            background: #fffcf8;
+            padding: 20px 24px;
+            border-radius: 20px;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.03);
+            border: 1px solid #ffe1ca;
+            margin-top: 20px;
+        }
+
+        .address-block p {
+            margin: 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+
+        .hero-icon {
+            flex: 0.8;
+            text-align: center;
+            background: #ffefdf;
+            border-radius: 60px;
+            padding: 30px 20px;
+        }
+
+        .hero-icon span {
+            font-size: 6rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #b45f2b;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #924d20;
+            transform: translateY(-2px);
+        }
+
+        /* contact cards */
+        .contact-details {
+            background: #ffffff;
+            border-radius: 32px;
+            padding: 30px;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.04);
+            margin-top: 20px;
+        }
+        .contact-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-between;
+        }
+        .contact-item {
+            flex: 1;
+            background: #fffaf5;
+            border-radius: 24px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #f2e0d0;
+        }
+        .contact-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: #b45f2b;
+        }
+        .contact-item p, .contact-item a {
+            font-size: 1rem;
+            color: #2c3e2b;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .map-placeholder {
+            background: #e7d9ce;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            margin-top: 25px;
+            font-size: 0.9rem;
+        }
+
+        /* footer */
+        footer {
+            background: #2e241d;
+            color: #e9dbcf;
+            padding: 40px 0 20px;
+        }
+
+        .footer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            color: #e6b17e;
+            margin-bottom: 18px;
+            font-size: 1.2rem;
+        }
+
+        .footer-col p, .footer-col a {
+            color: #d6c3b4;
+            text-decoration: none;
+            line-height: 1.7;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 25px;
+            border-top: 1px solid #463728;
+            font-size: 0.85rem;
+        }
+
+        /* utility */
+        .hidden-page {
+            display: none;
+        }
+
+        .active-page {
+            display: block;
+        }
+
+        button.nav-link-btn {
+            background: none;
+            border: none;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            color: #4a3524;
+            padding: 0;
+        }
+        button.nav-link-btn:hover {
+            color: #c96f2c;
+        }
+
+        @media (max-width: 800px) {
+            .nav-flex { flex-direction: column; align-items: flex-start; }
+            .hero-text h2 { font-size: 2rem; }
+            .section-title { font-size: 1.7rem; }
+            section { padding: 50px 0; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="navbar">
+    <div class="container nav-flex">
+        <div class="logo">
+            <h1>DADA JI PRODUCTS</h1>
+            <p>Moninder Pal Singh | Traditional Quality</p>
+        </div>
+        <ul class="nav-links">
+            <li><button class="nav-link-btn" data-page="home">🏠 Home</button></li>
+            <li><button class="nav-link-btn" data-page="privacy">🔒 Privacy Policy</button></li>
+            <li><button class="nav-link-btn" data-page="terms">📜 Terms & Conditions</button></li>
+            <li><button class="nav-link-btn" data-page="contact">📞 Contact</button></li>
+        </ul>
+    </div>
+</header>
+
+<main>
+    <!-- HOME PAGE (default visible) -->
+    <div id="home-page" class="active-page">
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <div class="brand-tag">🌟 Since decades of trust</div>
+                    <h2>Pure, Traditional & Quality Products</h2>
+                    <div class="owner">Proprietor: <strong>MONINDER PAL SINGH</strong></div>
+                    <div class="address-block">
+                        <p>📍 <strong>GALI NO. 2, RAM NAGAR, RAILWAY ROAD, NABHA</strong></p>
+                        <p>🏙️ Patiala District, Punjab - 147201</p>
+                        <p>📞 <a href="tel:+919463554035" style="color:#b45f2b; text-decoration:none;">+91 94635 54035</a></p>
+                        <p>📧 dada.ji.products@nabha.in (support)</p>
+                    </div>
+                    <a href="#" class="btn" id="quickContactBtn">📲 Contact Us</a>
+                </div>
+                <div class="hero-icon">
+                    <span>🛍️🌾</span>
+                    <p style="margin-top:15px; font-weight:500;">Dada Ji’s Promise</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="container" style="padding-bottom: 40px;">
+            <div style="background:#fff2e8; border-radius: 28px; padding: 35px 25px; margin: 20px 0 20px;">
+                <h3 style="color:#b45f2b; font-size:1.8rem;">✨ About DADA JI PRODUCTS</h3>
+                <p style="margin-top: 15px; font-size:1.05rem;">Rooted in the heritage of Nabha, Dada Ji Products brings you authentic, high-quality goods that honor traditional craftsmanship. Moninder Pal Singh ensures every product reflects purity and honesty — directly from Ram Nagar, Railway Road to your home. We serve Patiala and beyond with excellence.</p>
+                <div style="margin-top: 25px; display: flex; gap: 15px; flex-wrap: wrap;">
+                    <span style="background:#ffffffcc; padding:6px 16px; border-radius:50px;">✔️ Natural Ingredients</span>
+                    <span style="background:#ffffffcc; padding:6px 16px; border-radius:50px;">✔️ Family Recipe</span>
+                    <span style="background:#ffffffcc; padding:6px 16px; border-radius:50px;">✔️ Trusted since 1990's</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PRIVACY POLICY PAGE -->
+    <div id="privacy-page" class="hidden-page">
+        <div class="container" style="padding: 70px 0 80px;">
+            <h1 class="section-title">Privacy Policy</h1>
+            <div style="background: white; border-radius: 28px; padding: 35px; margin-top: 20px; box-shadow: 0 6px 14px rgba(0,0,0,0.02); border: 1px solid #f3e1cf;">
+                <p><strong>Effective Date:</strong> April 2026</p>
+                <p>At DADA JI PRODUCTS (owned and operated by Moninder Pal Singh), we value your privacy. This Privacy Policy describes how we collect, use, and protect any information when you visit our website or contact us.</p>
+                <h3 style="margin: 25px 0 10px; color:#b45f2b;">1. Information We Collect</h3>
+                <p>We may collect personal details such as name, phone number, email address, and address when you voluntarily contact us via phone, email, or inquiry forms. We do not use automated tracking cookies for advertising purposes. However, basic server logs may collect IP addresses to maintain security.</p>
+                <h3 style="margin: 25px 0 10px; color:#b45f2b;">2. Use of Information</h3>
+                <p>Information is used solely to respond to your queries, process orders (if any), and improve customer service. We do not sell, trade, or rent your personal information to third parties.</p>
+                <h3 style="margin: 25px 0 10px; color:#b45f2b;">3. Data Security</h3>
+                <p>We implement appropriate security measures to protect your data against unauthorized access. However, no internet transmission is 100% secure.</p>
+                <h3 style="margin: 25px 0 10px; color:#b45f2b;">4. Third-Party Links</h3>
+                <p>Our website may contain links to external sites. We are not responsible for the privacy practices of other websites.</p>
+                <h3 style="margin: 25px 0 10px; color:#b45f2b;">5. Contact Us</h3>
+                <p>For any privacy-related questions, please reach out at: <strong>9463554035</strong> or visit our shop at Gali No. 2, Ram Nagar, Nabha.</p>
+                <p style="margin-top: 30px;"><em>This policy may be updated occasionally. Please check back for updates.</em></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- TERMS & CONDITIONS PAGE -->
+    <div id="terms-page" class="hidden-page">
+        <div class="container" style="padding: 70px 0 80px;">
+            <h1 class="section-title">Terms & Conditions</h1>
+            <div style="background: white; border-radius: 28px; padding: 35px; margin-top: 20px; box-shadow: 0 6px 14px rgba(0,0,0,0.02); border: 1px solid #f3e1cf;">
+                <p>Welcome to DADA JI PRODUCTS website. By accessing or using this site, you agree to comply with these Terms & Conditions.</p>
+                <h3 style="margin: 25px 0 10px; color:#b45f2b;">1. General Information</h3>
+                <p>This website is operated by Moninder Pal Singh (Proprietor). The term “Dada Ji Products”, “we”, “us” refers to the owner. Use of this website is subject to the following terms.</p>
+                <h3 style="margin: 25px 0 10px; color:#b45f2b;">2. Product Information & Pricing</h3>
+                <p>We strive to display accurate descriptions of our products. However, we do not warrant that product descriptions or other content is error-free. Prices may change without notice. For bulk orders, please contact us directly.</p>
+                <h3 style="margin: 25px 0 10px; color:#b45f2b;">3. Orders & Payment</h3>
+                <p>Orders can be placed via phone call or in-person at our store. Payment terms will be discussed at the time of order. We reserve the right to refuse any order.</p>
+                <h3 style="margin: 25px 0 10px; color:#b45f2b;">4. Shipping & Delivery</h3>
+                <p>We currently serve local regions around Nabha and Patiala. Delivery timelines are shared upon confirmation. We are not liable for delays caused by external factors.</p>
+                <h3 style="margin: 25px 0 10px; color:#b45f2b;">5. Returns & Refunds</h3>
+                <p>For quality concerns, please contact us within 3 days of purchase. Refunds or exchanges are at our discretion after verification.</p>
+                <h3 style="margin: 25px 0 10px; color:#b45f2b;">6. Limitation of Liability</h3>
+                <p>Dada Ji Products shall not be liable for any indirect, incidental, or consequential damages arising from the use of our products or website.</p>
+                <h3 style="margin: 25px 0 10px; color:#b45f2b;">7. Governing Law</h3>
+                <p>These terms are governed by the laws of India, and any disputes shall be subject to the jurisdiction of Patiala courts.</p>
+                <p style="margin-top: 30px;">For any questions, contact <strong>9463554035</strong> or visit our office in Nabha.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT PAGE -->
+    <div id="contact-page" class="hidden-page">
+        <div class="container" style="padding: 70px 0 80px;">
+            <h1 class="section-title">Contact Us</h1>
+            <div class="contact-details">
+                <div class="contact-flex">
+                    <div class="contact-item">
+                        <h3>📞 Phone / WhatsApp</h3>
+                        <p><a href="tel:+919463554035">+91 94635 54035</a></p>
+                        <p style="font-size:0.9rem;">Moninder Pal Singh</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>📍 Shop Address</h3>
+                        <p>GALI NO. 2, RAM NAGAR,<br> RAILWAY ROAD, NABHA,<br> Patiala, Punjab - 147201</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>📧 Email Support</h3>
+                        <p><a href="mailto:contact@dadajiproducts.in">contact@dadajiproducts.in</a></p>
+                        <p>(Response within 24 hrs)</p>
+                    </div>
+                </div>
+                <div class="map-placeholder">
+                    <p>📍 <strong>Ram Nagar, Railway Road, Nabha (Near Old Railway Station)</strong></p>
+                    <p>🕘 Walk-in Hours: Mon - Sat: 10:00 AM - 7:00 PM</p>
+                    <p style="font-size:0.85rem; margin-top:12px;">🗺️ Google Maps: Gali No.2, Ram Nagar, Nabha, Punjab 147201</p>
+                </div>
+                <div style="margin-top: 30px; background:#faf0e7; border-radius: 20px; padding: 24px;">
+                    <h3 style="color:#b45f2b;">📢 Get in touch with Dada Ji Products</h3>
+                    <p>For bulk inquiries, partnership, or feedback, feel free to call or visit our store. We look forward to serving you with authentic quality.</p>
+                    <p style="margin-top: 12px;"><strong>Proprietor:</strong> Moninder Pal Singh</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- FOOTER with copyright -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>DADA JI PRODUCTS</h4>
+                <p>Authentic quality from Nabha heartland. Trusted since generations.</p>
+                <p>Moninder Pal Singh (Proprietor)</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <p><button class="nav-link-btn" data-page="home" style="color:#d6c3b4; background:none; border:none; padding:0; font-size:0.9rem;">Home</button></p>
+                <p><button class="nav-link-btn" data-page="privacy" style="color:#d6c3b4; background:none; border:none; padding:0; font-size:0.9rem;">Privacy Policy</button></p>
+                <p><button class="nav-link-btn" data-page="terms" style="color:#d6c3b4; background:none; border:none; padding:0; font-size:0.9rem;">Terms & Conditions</button></p>
+                <p><button class="nav-link-btn" data-page="contact" style="color:#d6c3b4; background:none; border:none; padding:0; font-size:0.9rem;">Contact</button></p>
+            </div>
+            <div class="footer-col">
+                <h4>Reach us</h4>
+                <p>Gali No. 2, Ram Nagar,<br> Railway Road, Nabha,<br> Patiala, Punjab - 147201</p>
+                <p>📞 +91 94635 54035</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 DADA JI PRODUCTS | Moninder Pal Singh | All Rights Reserved.</p>
+            <p style="margin-top: 8px;">📍 Nabha, Punjab | Designed with tradition & care</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Page switching logic (Home, Privacy, Terms, Contact)
+    const pages = {
+        home: document.getElementById('home-page'),
+        privacy: document.getElementById('privacy-page'),
+        terms: document.getElementById('terms-page'),
+        contact: document.getElementById('contact-page')
+    };
+
+    function showPage(pageId) {
+        // hide all pages
+        Object.values(pages).forEach(page => {
+            if(page) page.classList.add('hidden-page');
+            if(page) page.classList.remove('active-page');
+        });
+        const active = pages[pageId];
+        if(active) {
+            active.classList.remove('hidden-page');
+            active.classList.add('active-page');
+        }
+        // update active style for nav buttons (optional visual)
+        const allNavBtns = document.querySelectorAll('.nav-link-btn');
+        allNavBtns.forEach(btn => {
+            if(btn.getAttribute('data-page') === pageId) {
+                btn.style.color = '#c96f2c';
+                btn.style.borderBottom = '2px solid #c96f2c';
+                btn.style.paddingBottom = '4px';
+            } else {
+                btn.style.color = '';
+                btn.style.borderBottom = '';
+                btn.style.paddingBottom = '';
+                // reset default for anchor-like buttons
+                if(btn.style) {
+                    btn.style.color = '#4a3524';
+                    btn.style.borderBottom = 'none';
+                }
+            }
+        });
+    }
+
+    // attach event to all nav buttons (including footer ones)
+    document.querySelectorAll('.nav-link-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const page = btn.getAttribute('data-page');
+            if(page && pages[page]) {
+                showPage(page);
+                // scroll to top on page change for better UX
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else if(page === 'home') {
+                showPage('home');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        });
+    });
+
+    // Quick contact button on home page -> redirect to contact page
+    const quickBtn = document.getElementById('quickContactBtn');
+    if(quickBtn) {
+        quickBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            showPage('contact');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    // ensure default active highlight matches home on load
+    window.addEventListener('DOMContentLoaded', () => {
+        showPage('home');
+        // also make sure phone number clicks are functional
+        const telLinks = document.querySelectorAll('a[href^="tel:"]');
+        telLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                // no interference, native dialer
+            });
+        });
+    });
+</script>
+</body>
+</html>
